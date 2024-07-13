@@ -1,0 +1,108 @@
+.tasks-container{
+    padding: 3% 10%;
+    height: 100vh;
+}
+#addTaskInput{
+    width: 26rem;
+}
+.form-group{
+    display: flex;
+    gap: 30px;
+}
+.single-task{
+    display: flex;
+    
+    width: 300px;
+    padding: 20px 20px;
+    border: 1px #575757 solid;
+    border-radius: 10px;
+    font-weight: 400;
+    
+    transition: box-shadow 1s ease;
+}
+
+.task-desc{
+    width: 100%;
+}
+
+
+.task-desc:hover + .single-task {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.dark-search{
+    background-color: #575757;
+}
+
+.dark-search::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+ .dark-search ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: white;
+  }
+
+  .dark-card{
+    background-color: #9d9d9d;
+    border-color: black;
+    transition: background-color 1s fade-in;
+    transition: box-shadow 1s ease;
+  }
+
+  .dark-card:hover{
+    box-shadow: #a7ffbc 1px 1px 20px;
+  }
+
+  .tooltip-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 17px;
+    border-radius: 50px;
+  }
+  
+  .tooltip {
+    background-color: #00a36d;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.3em 0.6em;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: 50px;
+  }
+  
+  .tooltip::before {
+    background-color: #00a36d;
+    position: absolute;
+    content: "";
+    height: 0.6em;
+    width: 0.6em;
+    bottom: -0.2em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+  }
+  
+  .tooltip-container:hover .tooltip {
+    top: -100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  p{
+    margin: 0;
+
+  }
+  .task-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .task-options button{
+    border: none;
+    }
